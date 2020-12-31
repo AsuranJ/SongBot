@@ -33,7 +33,7 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Create your own bot", url="https://github.com/alinebot/songs"
+                        text="Join My Channel", url="https://t.me/SerialCoIn"
                     )
                 ]
             ]
