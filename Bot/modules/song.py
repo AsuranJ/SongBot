@@ -45,6 +45,11 @@ async def song(client, message):
         return ""
     rename = os.rename(download, f"{str(user_id)}.mp3")
     await app.send_chat_action(message.chat.id, "upload_audio")
+    await bot.delete_messages(
+        chat_id=message.chat.id,
+        message_ids=message.reply_to_message.message_id,
+        revoke=True
+    )
     await app.send_audio(
         chat_id=message.chat.id,
         audio=f"{str(user_id)}.mp3",
